@@ -17,34 +17,42 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
         className="bg-[#1e1e1e] rounded-2xl px-6 py-3 max-w-[1300px] mx-auto shadow-lg flex justify-between items-center"
       >
-        {/* Left: Logo + Title */}
+        {/* Logo */}
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="Logo" className="w-8 h-8" />
-          <h1 className="text-white text-xl font-bold">nebulae</h1>
+          <h1 className="text-white text-xl font-bold">Nebulae</h1>
         </div>
 
-        {/* Center Nav Links (hidden on mobile) */}
-        <ul className="hidden md:flex gap-8 text-white text-lg font-medium">
+        {/* Nav Links (Desktop) */}
+        <ul className="hidden md:flex gap-12 text-white text-lg font-medium">
           {navLinks.map((link, index) => (
             <li
               key={index}
-              className="hover:text-purple-400 transition-colors duration-300"
+              className="hover:text-purple-400 transition-colors duration-300 cursor-pointer"
             >
               {link}
             </li>
           ))}
         </ul>
 
-        {/* Right: Button (desktop) */}
+        {/* Let’s Talk Button (Desktop) */}
         <div className="hidden md:block">
           <Link href="/lets-talk">
-            <button className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition">
-              Let’s Talk
-            </button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-gradient-to-r from-[#a259ff] via-[#b75cff] to-[#57c1eb] text-white px-6 py-2 rounded-full font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:opacity-90"
+              style={{
+                fontSize: '1.1rem',
+                fontFamily: 'Poppins, sans-serif',
+              }}
+            >
+              Let’s Talk ↗
+            </motion.button>
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Hamburger (Mobile) */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
@@ -56,7 +64,7 @@ const Navbar = () => {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           initial={{ height: 0 }}
@@ -68,15 +76,25 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <li
                 key={index}
-                className="hover:text-purple-400 transition-colors duration-300"
+                className="hover:text-purple-400 transition-colors duration-300 cursor-pointer"
               >
                 {link}
               </li>
             ))}
             <li>
-              <button className="px-5 py-2 rounded-full text-white font-semibold text-sm bg-gradient-to-r from-[#ff5edf] via-[#fb5294] to-[#57c1eb] shadow-md transition duration-300 hover:opacity-90">
-                Let’s Talk
-              </button>
+              <Link href="/lets-talk">
+                <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="w-full bg-gradient-to-r from-[#a259ff] via-[#b75cff] to-[#57c1eb] text-white px-5 py-2 rounded-full font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:opacity-90"
+                  style={{
+                    fontSize: '1rem',
+                    fontFamily: 'Poppins, sans-serif',
+                  }}
+                >
+                  Let’s Talk ↗
+                </motion.button>
+              </Link>
             </li>
           </ul>
         </motion.div>

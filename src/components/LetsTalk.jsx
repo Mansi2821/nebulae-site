@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "@/components/Navbar"
 
 const LetsTalk = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white px-6 py-10 font-sans">
+      <Navbar/>
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
         {/* Left Section */}
         <div>
