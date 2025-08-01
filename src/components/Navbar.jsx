@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -36,9 +37,11 @@ const Navbar = () => {
 
         {/* Right: Button (desktop) */}
         <div className="hidden md:block">
-          <button className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition">
-            Let’s Talk
-          </button>
+          <Link href="/lets-talk">
+            <button className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 transition">
+              Let’s Talk
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
