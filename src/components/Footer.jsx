@@ -61,14 +61,14 @@ const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-[#2e2e48] mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="border-t border-[#2e2e48]  mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Copyright */}
-        <p className="text-xs text-[#cbd5e1] text-center md:text-left">
+        <p className="text-xs text-[#cbd5e1] text-center pl-4 md:pl-20 md:text-left">
           Copyright © 2023 designed by Thetork
         </p>
 
         {/* Social Icons */}
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 pr-4 md:pr-20">
           {[FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter].map((Icon, idx) => (
             <div
               key={idx}
@@ -84,6 +84,8 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
 
 
 
