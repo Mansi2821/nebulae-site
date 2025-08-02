@@ -41,8 +41,9 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-gradient-to-r from-[#a259ff] via-[#b75cff] to-[#57c1eb] text-white px-6 py-2 rounded-full font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:opacity-90"
+              className="bg-gradient-to-r from-[#a259ff] via-[#b75cff] to-[#57c1eb] text-white px-6 py-2 rounded-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:opacity-90"
               style={{
+                backgroundImage: "linear-gradient(to right, #943bc7ff, #3682e0ff)",
                 fontSize: '1.1rem',
                 fontFamily: 'Poppins, sans-serif',
               }}
@@ -86,11 +87,13 @@ const Navbar = () => {
                 <motion.button
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.96 }}
-                  className="w-full bg-gradient-to-r from-[#a259ff] via-[#b75cff] to-[#57c1eb] text-white px-5 py-2 rounded-full font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:opacity-90"
+                  className="w-full bg-gradient-to-r from-[#a259ff] via-[#b75cff] to-[#57c1eb] text-white px-5 py-2 rounded-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:opacity-90"
                   style={{
-                    fontSize: '1rem',
+            backgroundImage: "linear-gradient(to right, #943bc7ff, #3682e0ff)",
+            fontSize: '1rem',
                     fontFamily: 'Poppins, sans-serif',
-                  }}
+          }}
+  
                 >
                   Let’s Talk ↗
                 </motion.button>

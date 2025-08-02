@@ -18,6 +18,11 @@ const LearnMore = () => {
         alt="star"
         className="absolute top-1/2 left-1/2 w-3 md:w-5 opacity-60"
       />
+      <img
+        src="/star4.png"
+        alt="star"
+        className="absolute top-10 right-10 w-30 h-20 opacity-60"
+      />
 
       {/* Arrow Top */}
       <ArrowUpRight
@@ -32,15 +37,20 @@ const LearnMore = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-[#d1d5db] h-64 w-full rounded-xl"
-        />
+        >
+          <img
+            src="case-study.jpg" // Replace with your actual image path
+            alt="Case Study"
+            className="w-full h-64 object-cover rounded-xl shadow-lg"
+          />
+        </motion.div>
 
         {/* Text Right */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-6 relative"
         >
           <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
             Learn More About <br />
@@ -52,9 +62,11 @@ const LearnMore = () => {
           <p className="text-[#94a3b8] leading-relaxed">
             Our portfolio showcases innovative solutions and exceptional outcomes delivered to our clients. From concept to completion, we’re dedicated to delivering results that exceed expectations and drive real business impact.
           </p>
-          <button className="bg-[#a855f7] hover:bg-[#9333ea] text-white font-semibold px-7 py-3 rounded-md text-sm md:text-base transition duration-300">
-            Explore More
-          </button>
+          <div className="relative">
+            <button className="bg-[#a855f7] hover:bg-[#9333ea] text-white font-semibold px-6 py-2 md:px-5 md:py-2 text-sm rounded-md transition duration-300">
+              Explore More
+            </button>
+          </div>
         </motion.div>
       </div>
 
@@ -71,7 +83,7 @@ const LearnMore = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-6 relative"
         >
           <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
             Learn More About <br />
@@ -83,9 +95,11 @@ const LearnMore = () => {
           <p className="text-[#94a3b8] leading-relaxed">
             Our portfolio showcases innovative solutions and exceptional outcomes delivered to our clients. From concept to completion, we’re dedicated to delivering results that exceed expectations and drive real business impact.
           </p>
-          <button className="bg-[#a855f7] hover:bg-[#9333ea] text-white font-semibold px-7 py-3 rounded-md text-sm md:text-base transition duration-300">
-            Explore More
-          </button>
+          <div className="relative">
+            <button className="bg-[#a855f7] hover:bg-[#9333ea] text-white font-semibold px-6 py-2 md:px-5 md:py-2 text-sm rounded-md transition duration-300">
+              Explore More
+            </button>
+          </div>
         </motion.div>
 
         {/* Image Right */}
@@ -93,8 +107,13 @@ const LearnMore = () => {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-[#d1d5db] h-64 w-full rounded-xl"
-        />
+        >
+          <img
+            src="case-study2.jpg" // Replace with your actual image path
+            alt="Projects"
+            className="w-full h-64 object-cover rounded-xl shadow-lg"
+          />
+        </motion.div>
       </div>
     </section>
   );

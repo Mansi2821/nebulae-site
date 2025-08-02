@@ -44,7 +44,7 @@ const services = [
 
 const ServiceSection = () => {
   return (
-    <section className="relative w-full bg-[#0f0c2f] text-white py-20 px-6 md:px-12">
+    <section className="relative w-full bg-[#0a081e] text-white py-10 px-6 md:px-12">
       {/* Background Stars */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
@@ -53,14 +53,14 @@ const ServiceSection = () => {
             className="absolute text-blue-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0] }}
-            transition={{ repeat: Infinity, duration: 3, delay: i * 0.7 }}
+            transition={{ repeat: Infinity, duration: 10, delay: i * 2 }}
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
               fontSize: `${Math.random() * 8 + 8}px`,
             }}
           >
-            ✯
+            <img src="/star.png" alt="star" className="w-3 h-3"/>
           </motion.div>
         ))}
       </div>
@@ -78,22 +78,24 @@ const ServiceSection = () => {
         </p>
 
         {/* Service Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-          {services.map((service, idx) => (
-            <motion.div
-              key={idx}
-              whileHover={{ scale: 1.05 }}
-              className="relative bg-[#1c173b]/50 backdrop-blur-md p-6 rounded-lg border border-white/10 shadow-md"
-            >
-              <div className="absolute -top-5 left-6 w-12 h-12 rounded-md bg-[#472b8c] flex items-center justify-center">
-                {service.icon}
-              </div>
-              <h3 className="mt-8 mb-2 text-lg font-medium">{service.title}</h3>
-              <p className="text-sm text-slate-400 mb-6">{service.desc}</p>
-              <a
-                href="#"
-                className="text-sm font-semibold text-[#a855f7] hover:underline flex items-center gap-1"
-              >
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+      {services.map((service, idx) => (
+        <motion.div
+          key={idx}
+          whileHover={{ scale: 1.05 }}
+          className="relative bg-[#1c173b]/50 backdrop-blur-md p-6 rounded-lg border border-purple-500/30 shadow-md hover:shadow-[0_0_20px_#a855f7] transition duration-300"
+        >
+          <div className="absolute -top-5 left-6 w-12 h-12 rounded-md bg-[#472b8c] flex items-center justify-center">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-fuchsia-500">
+              {service.icon}
+            </span>
+          </div>
+          <h3 className="mt-8 mb-2 text-lg font-medium">{service.title}</h3>
+          <p className="text-sm text-slate-400 mb-6">{service.desc}</p>
+          <a
+            href="#"
+            className="text-sm font-semibold text-[#a855f7] hover:underline flex items-center gap-1"
+          >
                 Read More <span className="text-sm">&rarr;</span>
               </a>
             </motion.div>
@@ -105,4 +107,5 @@ const ServiceSection = () => {
 };
 
 export default ServiceSection;
+
 
