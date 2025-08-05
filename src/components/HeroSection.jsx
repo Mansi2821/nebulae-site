@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center text-white px-4">
       <Navbar />
 
-      <div className="absolute inset-0 -z-6 bg-[radial-gradient(circle_at_center,_#302b63,_#0f0c29,_#000000)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_#302b63,_#0f0c29,_#000000)]" />
 
 
       {/* Tagline */}
@@ -57,11 +57,11 @@ const HeroSection = () => {
       </div>
 
       {/* Decorative stars */}
-      <img src="/star.png" className="absolute left-10 top-1/4 w-5 animate-pulse" alt="star" />
-      <img src="/star2.png" className="absolute right-10 top-1/3 w-6 animate-pulse" alt="star" />
-      <img src="/star3.png" className="absolute left-1/3 bottom-20 w-8 animate-pulse" alt="star" />
-      <img src="/star2.png" className="absolute right-[20%] bottom-1/4 w-4 animate-pulse" alt="star" />
-      <img src="/star.png" className="absolute left-[15%] top-[15%] w-3 animate-pulse" alt="star" />
+      <img src="star.png" className="absolute left-10 top-1/4 w-5 animate-pulse" alt="star" />
+      <img src="star2.png" className="absolute right-10 top-1/3 w-6 animate-pulse" alt="star" />
+      <img src="star3.png" className="absolute left-1/3 bottom-20 w-8 animate-pulse" alt="star" />
+      <img src="star2.png" className="absolute right-[20%] bottom-1/4 w-4 animate-pulse" alt="star" />
+      <img src="star.png" className="absolute left-[15%] top-[15%] w-3 animate-pulse" alt="star" />
 
       {/* Brightness pulse animation */}
       <style jsx>{`

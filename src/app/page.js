@@ -1,9 +1,12 @@
-import StarsBackground from "../components/StarsBackground";
-import HeroSection from "../components/HeroSection";
+"use client";
+import React from "react";
+import StarsBackground from "@/components/StarsBackground";
+import HeroSection from "@/components/HeroSection";
 import WhatWeDo from"../components/WhatWeDo";
 import LearnMore from "@/components/LearnMore";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+
 
 
 export default function HomePage() {

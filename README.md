@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ✨ Nebulae Site
 
-## Getting Started
+Welcome to the **Nebulae** website! This is a visually interactive and responsive space-themed site built using **Node.js**, **Tailwind CSS**, and **React components**. It features animated backgrounds, dynamic sections, and modern UI design principles.
 
-First, run the development server:
+---
+
+## 📁 Project Structure
+
+src/
+├── app/
+│ ├── lets-talk/ # Contact form page
+│ ├── favicon.ico # Site icon
+│ ├── globals.css # Global styles with Tailwind
+│ ├── layout.js # Layout wrapper for all pages
+│ ├── page.js # Homepage content
+│
+├── components/ # All reusable UI sections
+│ ├── Blog.jsx # Blog section
+│ ├── Footer.jsx # Footer component
+│ ├── HeroSection.js # Hero section with intro message
+│ ├── LearnMore.jsx # Skills/Certifications/Extras
+│ ├── LetsTalk.jsx # Contact section component
+│ ├── Navbar.jsx # Navigation bar (mobile & desktop)
+│ ├── StarsBackground.js # Animated background stars
+│ ├── Testimonials.jsx # User reviews/testimonials
+│ └── WhatWeDo.jsx # Summary of services/mission
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Node.js (App Router)
+- **Styling:** Tailwind CSS via CDN
+- **Language:** JavaScript (React)
+- **Deployment Ready:** Yes
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-> git clone https://github.com/Mansi2821/nebulae-site.git
+-> cd nebulae-site
+-> npm install
+-> npm run dev
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ Features
+🔭 Animated Star Background (StarsBackground.js)
 
-## Learn More
+🎯 Hero Section with Gradient Text
 
-To learn more about Next.js, take a look at the following resources:
+🧠 Learn More Section: Skills, certifications, and achievements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📚 Blog Section: Posts or updates (placeholder currently)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+⭐ Testimonials: User or client reviews with animations
 
-## Deploy on Vercel
+📞 Let's Talk: Contact form or final CTA
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🧭 Responsive Navbar: Mobile-friendly menu with resume download option
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🎨 Clean UI: Professional color palette and design
+
+
+
+Testing the Site
+Open the browser at http://localhost:3000
+
+Navigate through the Navbar
+
+Check responsiveness on different devices
+
+Test scroll-based animations
+
+Visit /lets-talk to check the contact section
+
+
+To deploy this site on platforms like Vercel or Netlify:
+
+Push your project to GitHub.
+
+Connect your GitHub repo in Vercel.
+
+Hit Deploy.
+
+Your site will be live with each new push to main branch.
+
+
+🙌 Author
+Built with 💙 by Mansi Bhardwaj
+Feel free to fork, modify, or contribute!
