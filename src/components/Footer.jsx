@@ -1,15 +1,22 @@
 "use client";
 import React from "react";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-br from-[#0f0f1a] via-[#120e28] to-[#1a1531] text-white px-6 md:px-20 py-20 relative z-10 overflow-hidden">
+    <footer className="w-full bg-gradient-to-br from-[#0f0f1a] via-[#120e28] to-[#1a1531] text-white px-6 sm:px-10 lg:px-20 py-16 sm:py-20 relative z-10 overflow-hidden">
 
       {/* Main Grid */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-10 relative z-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 relative z-10">
+        
         {/* Logo + Description */}
-        <div className="col-span-2 md:col-span-1">
+        <div className="lg:col-span-1 col-span-1">
           <div className="flex items-center gap-2 mb-4">
             <img src="/logo.png" alt="logo" className="w-6 h-6" />
             <h2 className="text-xl font-bold">Nebulae</h2>
@@ -20,15 +27,14 @@ const Footer = () => {
           </p>
         </div>
 
-         {/* Right Side: Star Image */}
+        {/* Star Image */}
         <div className="hidden lg:block">
           <img src="/star4.png" alt="star" className="w-24 h-24 object-contain" />
         </div>
-      
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-semibold mb-4">Quick Links</h4>
+          <h4 className="font-semibold mb-4 text-white">Quick Links</h4>
           <ul className="space-y-2 text-sm text-[#cbd5e1]">
             <li>About Us</li>
             <li>Teams</li>
@@ -39,7 +45,7 @@ const Footer = () => {
 
         {/* Support */}
         <div>
-          <h4 className="font-semibold mb-4">Support</h4>
+          <h4 className="font-semibold mb-4 text-white">Support</h4>
           <ul className="space-y-2 text-sm text-[#cbd5e1]">
             <li>Terms & Conditions</li>
             <li>Privacy Policy</li>
@@ -50,7 +56,7 @@ const Footer = () => {
 
         {/* Company */}
         <div>
-          <h4 className="font-semibold mb-4">Company</h4>
+          <h4 className="font-semibold mb-4 text-white">Company</h4>
           <ul className="space-y-2 text-sm text-[#cbd5e1]">
             <li>Careers</li>
             <li>Updates</li>
@@ -60,21 +66,22 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="border-t border-[#2e2e48]  mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      {/* Divider Section */}
+      <div className="border-t border-[#2e2e48] mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-6 px-4 md:px-20">
+        
         {/* Copyright */}
-        <p className="text-xs text-[#cbd5e1] text-center pl-4 md:pl-20 md:text-left">
-          Copyright © 2023 designed by Thetork
+        <p className="text-xs text-[#cbd5e1] text-center md:text-left">
+          © 2023 Nebulae. Designed by Thetork
         </p>
 
         {/* Social Icons */}
-        <div className="flex flex-wrap justify-center gap-4 pr-4 md:pr-20">
+        <div className="flex flex-wrap justify-center md:justify-end gap-4">
           {[FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter].map((Icon, idx) => (
             <div
               key={idx}
               className="w-9 h-9 flex items-center justify-center rounded-full bg-[#1c1b29] text-white hover:bg-purple-600 transition"
             >
-              <Icon />
+              <Icon size={16} />
             </div>
           ))}
         </div>
@@ -84,8 +91,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-
-

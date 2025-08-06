@@ -1,6 +1,6 @@
 # ✨ Nebulae Site
 
-Welcome to the **Nebulae** website! This is a visually interactive and responsive space-themed site built using **Node.js**, **Tailwind CSS**, and **React components**. It features animated backgrounds, dynamic sections, and modern UI design principles.
+Welcome to the **Nebulae** website! This is a visually interactive and responsive space-themed site built using **Next.js**, **Tailwind CSS**, and **React components**. It features animated backgrounds, dynamic sections, and modern UI design principles.
 
 ---
 
@@ -29,7 +29,7 @@ src/
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Node.js (App Router)
+- **Framework:** Node.js, Next.js
 - **Styling:** Tailwind CSS via CDN
 - **Language:** JavaScript (React)
 - **Deployment Ready:** Yes

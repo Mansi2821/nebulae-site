@@ -75,9 +75,10 @@ const Blog = () => {
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto pt-24 pb-6">
-        <h1 className="text-4xl font-extrabold">Blogs</h1>
-        <div className="mt-3 text-sm text-[#9ca3af]">
-          <span className="text-[#a78bfa]">Home</span> / <span className="text-white">Blogs</span>
+        <h1 className="text-4xl mt- 60 pt-10 font-extrabold">Blogs</h1>
+        <div className="mt-10 mb-10 text-sm text-[#9ca3af]">
+          <span className="text-white hover:text-purple-400">Home </span>  /  <span className="text-white hover:text-purple-400"> Blogs</span>
+
         </div>
       </div>
 
@@ -158,7 +159,7 @@ const Blog = () => {
 
       {/* View All Articles Button */}
       <div className="mt-16 text-center">
-        <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium px-6 py-3 rounded-full hover:opacity-90 transition">
+        <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium px-6 py-3 rounded-lg hover:opacity-70 transition">
           View All Articles
         </button>
       </div>
