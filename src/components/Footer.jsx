@@ -1,12 +1,15 @@
 "use client";
 import React from "react";
+import Link from "next/link";
+
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
-  FaTwitter,
+  FaPinterestP,
+  FaBehance,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -17,15 +20,15 @@ const Footer = () => {
         
         {/* Logo + Description */}
         <div className="lg:col-span-1 col-span-1">
-          <div className="flex items-center gap-2 mb-4">
-            <img src="/logo.png" alt="logo" className="w-6 h-6" />
-            <h2 className="text-xl font-bold">Nebulae</h2>
-          </div>
-          <p className="text-sm text-[#cbd5e1] leading-relaxed max-w-xs">
-            Welcome to our trading site! We offer the best, most affordable
-            products and services around. Shop now and start finding great deals!
-          </p>
-        </div>
+  <Link href="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
+    <img src="/logo.png" alt="logo" className="w-6 h-6" />
+    <h2 className="text-xl font-bold">Nebulae</h2>
+  </Link>
+  <p className="text-sm text-[#cbd5e1] leading-relaxed max-w-xs">
+    Welcome to our trading site! We offer the best, most affordable
+    products and services around. Shop now and start finding great deals!
+  </p>
+</div>
 
         {/* Star Image */}
         <div className="hidden lg:block">
@@ -71,20 +74,31 @@ const Footer = () => {
         
         {/* Copyright */}
         <p className="text-xs text-[#cbd5e1] text-center md:text-left">
-          © 2023 Nebulae. Designed by Thetork
+          © 2023 Nebulae. Designed by Nebulae
         </p>
 
         {/* Social Icons */}
-        <div className="flex flex-wrap justify-center md:justify-end gap-4">
-          {[FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter].map((Icon, idx) => (
-            <div
-              key={idx}
-              className="w-9 h-9 flex items-center justify-center rounded-full bg-[#1c1b29] text-white hover:bg-purple-600 transition"
-            >
-              <Icon size={16} />
-            </div>
-          ))}
-        </div>
+<div className="flex gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide md:overflow-visible md:flex-wrap md:whitespace-normal">
+  {[
+    { Icon: FaFacebookF, link: "https://www.facebook.com/nebulaesoft/" },
+    { Icon: FaXTwitter, link: "https://x.com/NebulaeItsoft" },
+    { Icon: FaPinterestP, link: "https://www.pinterest.com/nebulaeitsoft/" },
+    { Icon: FaInstagram, link: "https://www.instagram.com/uxui_research_nebulae/" },
+    { Icon: FaLinkedinIn, link: "#" },
+    { Icon: FaBehance, link: "https://www.behance.net/nebulaeuxuisolution" },
+  ].map(({ Icon, link }, idx) => (
+    <a
+      key={idx}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-9 h-9 flex items-center justify-center rounded-full bg-[#1c1b29] text-white hover:bg-purple-600 transition"
+    >
+      <Icon size={16} />
+    </a>
+  ))}
+</div>
+
       </div>
     </footer>
   );

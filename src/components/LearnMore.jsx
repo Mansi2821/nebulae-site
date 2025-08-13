@@ -37,9 +37,10 @@ const LearnMore = () => {
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
+          className="order-2 md:order-1"
         >
           <img
-            src="case-study.jpg" // Replace with your actual image path
+            src="case-study.jpg" 
             alt="Case Study"
             className="w-full h-64 object-cover rounded-xl shadow-lg"
           />
@@ -50,7 +51,8 @@ const LearnMore = () => {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col gap-6 relative"
+
+          className="flex flex-col gap-6 relative order-1 md:order-2"
         >
           <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
             Learn More About <br />
@@ -109,7 +111,7 @@ const LearnMore = () => {
           transition={{ duration: 0.6 }}
         >
           <img
-            src="case-study2.jpg" // Replace with your actual image path
+            src="case-study2.jpg" 
             alt="Projects"
             className="w-full h-64 object-cover rounded-xl shadow-lg"
           />

@@ -1,16 +1,16 @@
 "use client";
 import React from "react";
 import Navbar from "@/components/Navbar";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
 import {
   FaFacebookF,
-  FaLinkedinIn,
+  FaPinterestP,
   FaInstagram,
-  FaYoutube,
-  FaTwitter,
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+  FaLinkedinIn,
+  FaBehance,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const LetsTalk = () => {
   return (
@@ -19,12 +19,14 @@ const LetsTalk = () => {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_#302b63,_#0f0c29,_#000000)]" />
 
       {/* Decorative Stars */}
-      <img src="/star3.png" alt="star" className="absolute top-10 left-10 w-12 h-12 opacity-80" />
-      <img src="/star.png" alt="star" className="absolute top-16 right-12 w-5 opacity-90" />
+      <img
+        src="/star.png"
+        alt="star"
+        className="absolute top-16 right-12 w-5 opacity-90"
+      />
 
-
-
-      <div className="max-w-7xl mx-auto mt-16 grid lg:grid-cols-2 gap-16 items-start">
+      {/* Main Content Container (aligned with Navbar width) */}
+      <div className="max-w-7xl mx-auto mt-16 grid lg:grid-cols-2 gap-16 items-start px-4">
         {/* Left Section */}
         <div className="space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold leading-snug">
@@ -35,13 +37,66 @@ const LetsTalk = () => {
 
           {/* Social Icons */}
           <div className="flex space-x-4">
-            {[FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube, FaTwitter].map((Icon, idx) => (
-              <a href="#" key={idx} className="group">
-                <div className="w-10 h-10 rounded-full border border-white/40 hover:border-[#3b82f6] transition-colors flex items-center justify-center text-lg group-hover:text-[#3b82f6]">
-                  <Icon />
-                </div>
-              </a>
-            ))}
+            <a
+              href="https://www.facebook.com/nebulaesoft/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-10 h-10 rounded-full border border-white/40 hover:border-[#3b82f6] transition-colors flex items-center justify-center text-lg group-hover:text-[#3b82f6]">
+                <FaFacebookF />
+              </div>
+            </a>
+            <a
+              href="https://x.com/NebulaeItsoft"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-10 h-10 rounded-full border border-white/40 hover:border-[#3b82f6] transition-colors flex items-center justify-center text-lg group-hover:text-[#3b82f6]">
+                <FaXTwitter />
+              </div>
+            </a>
+            <a
+              href="https://www.pinterest.com/nebulaeitsoft/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-10 h-10 rounded-full border border-white/40 hover:border-[#3b82f6] transition-colors flex items-center justify-center text-lg group-hover:text-[#3b82f6]">
+                <FaPinterestP />
+              </div>
+            </a>
+            <a
+              href="https://www.instagram.com/uxui_research_nebulae/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-10 h-10 rounded-full border border-white/40 hover:border-[#3b82f6] transition-colors flex items-center justify-center text-lg group-hover:text-[#3b82f6]">
+                <FaInstagram />
+              </div>
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-10 h-10 rounded-full border border-white/40 hover:border-[#3b82f6] transition-colors flex items-center justify-center text-lg group-hover:text-[#3b82f6]">
+                <FaLinkedinIn />
+              </div>
+            </a>
+            <a
+              href="https://www.behance.net/nebulaeuxuisolution"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group"
+            >
+              <div className="w-10 h-10 rounded-full border border-white/40 hover:border-[#3b82f6] transition-colors flex items-center justify-center text-lg group-hover:text-[#3b82f6]">
+                <FaBehance />
+              </div>
+            </a>
           </div>
 
           {/* Contact Info */}
@@ -49,24 +104,34 @@ const LetsTalk = () => {
             <div className="flex items-start space-x-4">
               <FaPhoneAlt className="text-xl mt-1" />
               <div>
-                <p>0983888611</p>
-                <p>0917749254</p>
+                <p className="font-semibold">Phone</p>
+                <p className="text-sm">
+                  Our customer care is open from Mon–Fri, 10:00 am to 5:00 pm
+                </p>
+                <p>+8801712581668</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <FaEnvelope className="text-xl mt-1" />
               <div>
-                <p>Manhhackt08@Gmail.Com</p>
-                <p>Ckctm12@Gmail.Com</p>
+                <p className="font-semibold">Email</p>
+                <p className="text-sm">
+                  Our support team will get back to you during standard
+                  business hours.
+                </p>
+                <p>sales@nebulaesoft.com</p>
+                <p>support@nebulaesoft.com</p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <FaMapMarkerAlt className="text-xl mt-1" />
               <div>
-                <p>88 Sheridan Street</p>
-                <p>534 Victoria Trail</p>
+                <p className="font-semibold">Address</p>
+                <p>
+                  Bailey Road - HQ, Dhaka, Bangladesh
+                </p>
               </div>
             </div>
           </div>
@@ -74,7 +139,7 @@ const LetsTalk = () => {
 
         {/* Right Section - Contact Form */}
         <div className="w-full flex flex-col lg:flex-row gap-6 items-start">
-          <form className="space-y-6 w-full lg:w-2/3">
+          <form className="space-y-6 w-full lg:w-4/5">
             <div>
               <label className="block text-lg mb-2">Name</label>
               <input
@@ -106,7 +171,8 @@ const LetsTalk = () => {
               type="submit"
               className="w-full py-3 rounded-md text-white font-semibold bg-gradient-to-r from-[#9333ea] to-[#3b82f6] hover:opacity-90 transition"
               style={{
-                backgroundImage: "linear-gradient(to right, #943bc7ff, #3682e0ff)",
+                backgroundImage:
+                  "linear-gradient(to right, #943bc7ff, #3682e0ff)",
                 fontSize: "1rem",
                 fontFamily: "Poppins, sans-serif",
               }}
@@ -116,43 +182,70 @@ const LetsTalk = () => {
           </form>
         </div>
       </div>
-      <div className="relative mt-20 mb-4">
-  <img src="/star2.png" alt="star" className="absolute -top-6 left-1/2 w-10 opacity-30" />
-  <img src="/star.png" alt="star" className="absolute -top-6 right-10 w-8 h-6 opacity-90" />
+
+      {/* Bottom Stars */}
+      <div className="relative mt-20 mb-4 max-w-7xl mx-auto px-4">
+        <img
+          src="/star3.png"
+          alt="star"
+          className="absolute -top-6 left-40px w-10 opacity-60"
+        />
+        <img
+          src="/star.png"
+          alt="star"
+          className="absolute -top-6 right-10 w-8 h-6 opacity-90"
+        />
+      </div>
+
+{/* Our Global Office Section */}
+<div className="mt-28 max-w-7xl mx-auto px-4">
+  <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_#302b63,_#0f0c29,_#000000)]" />
+  <h2 className="text-3xl md:text-4xl font-semibold text-left mb-12">
+    Our <span className="text-[#6366f1]">Global Office</span>
+  </h2>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    {[
+      {
+        country: "Bangladesh",
+        address: "Bailey Road - HQ, Dhaka, Bangladesh",
+        icon: "/location-1.png",
+      },
+      {
+        country: "Bangladesh",
+        address: "Hathazari Road, Chittagong, Bangladesh",
+        icon: "/location-2.png",
+      },
+      {
+        country: "India",
+        address: "Dehri On Sone, Bihar, India",
+        icon: "/location-3.png",
+      },
+    ].map((office, idx) => (
+      <div
+        key={idx}
+        className="bg-[#1e1e2f] rounded-xl p-6 shadow-md text-white/90 border border-white/5"
+      >
+        <div className="mb-4">
+          <img src={office.icon} alt="icon" className="w-40 h-30" />
+        </div>
+        {/* Country in bold */}
+        <h3 className="text-xl font-semibold mb-1">{office.country}</h3>
+        {/* Address in normal text */}
+        <p className="text-sm mb-3 leading-relaxed">{office.address}</p>
+        <p className="text-sm text-[#93c5fd] mb-1">sales@nebulaesoft.com</p>
+        <p className="text-sm text-[#93c5fd] mb-1">support@nebulaesoft.com</p>
+        <p className="text-sm text-[#93c5fd]">+8801712581668</p>
+      </div>
+    ))}
+  </div>
 </div>
 
-      {/* Our Global Office Section */}
-      <div className="mt-28">
-        {/* <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12"> */}
-         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_#302b63,_#0f0c29,_#000000)]" />
-        <h2 className="text-3xl md:text-4xl font-semibold text-left mb-12 px-4 sm:px-0">
 
-          Our <span className="text-[#6366f1]">Global Office</span>
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
-          {[1, 2, 3].map((_, idx) => (
-            <div
-              key={idx}
-              className="bg-[#1e1e2f] rounded-xl p-6 shadow-md text-white/90 border border-white/5"
-            >
-              <div className="mb-4">
-                <img src="/bar-chart.png" alt="icon" className="w-40 h-30" />
-              </div>
-              <h3 className="text-xl font-semibold mb-1">Bangladesh</h3>
-              <p className="text-sm mb-3 leading-relaxed">
-                8th Floor, 2 Bir Uttam AK Khandakar Road
-                <br />
-                Mohakhali C/A, Dhaka 1212, Bangladesh
-              </p>
-              <p className="text-sm text-[#93c5fd] mb-1">sales@brainstation-23.com</p>
-              <p className="text-sm text-[#93c5fd]">+8801404055296</p>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 };
 
 export default LetsTalk;
+
+

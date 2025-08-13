@@ -1,3 +1,8 @@
+
+
+
+
+
 "use client";
 import Link from 'next/link';
 import { useState } from "react";
@@ -6,8 +11,8 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Services", href: "/error" },
-  { name: "About Us", href: "#" },
-  { name: "Courses", href: "#" },
+  { name: "About Us", href: "/error" },
+  { name: "Courses", href: "/error" },
   { name: "Blogs", href: "/blog" },
   { name: "Careers", href: "/error" }
 ];
@@ -24,10 +29,10 @@ const Navbar = () => {
         className="backdrop-blur-md bg-[#3A384F]/80 rounded-2xl px-4 sm:px-6 py-2 sm:py-3 max-w-[1300px] mx-auto shadow-lg flex justify-between items-center"
       >
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <img src="/logo.png" alt="Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
           <h1 className="text-white text-lg sm:text-xl font-bold">Nebulae</h1>
-        </div>
+        </Link>
 
         {/* Nav Links (Desktop) */}
         <ul className="hidden md:flex gap-6 lg:gap-12 text-white text-base lg:text-lg font-medium">
@@ -84,10 +89,10 @@ const Navbar = () => {
           >
             {/* Close button + Logo */}
             <div className="flex justify-between items-center mb-4">
-              <div className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
                 <img src="/logo.png" alt="Logo" className="w-8 h-8" />
                 <h1 className="text-white text-xl font-bold">Nebulae</h1>
-              </div>
+              </Link>
               <button onClick={() => setIsOpen(false)}>
                 <X color="white" size={26} />
               </button>

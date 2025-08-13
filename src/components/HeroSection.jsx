@@ -9,9 +9,8 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_#302b63,_#0f0c29,_#000000)]" />
 
-
       {/* Tagline */}
-      <p className="text-base uppercase tracking-widest text-purple-300 mb-6 font-normal">
+      <p className="text-base uppercase tracking-widest text-purple-300 mb-6 font-normal mt-8 sm:mt-0">
         We're the Experts
       </p>
 
@@ -50,23 +49,44 @@ const HeroSection = () => {
         </a>
         <a
           href="#"
-          className="bg-[#151426] border border-white/10 px-6 py-3 rounded-md font-normal text-purple-400 text-base hover:bg-white/5 hover:scale-105 transition"
+          className="bg-[#151426] border border-white/10 px-6 py-3 rounded-md font-normal text-purple-400 text-base hover:bg-white/5 hover:scale-105 transition mt-4 sm:mt-0"
         >
           Get In Touch
         </a>
       </div>
 
       {/* Decorative stars */}
-      <img src="star.png" className="absolute left-10 top-1/4 w-5 animate-pulse" alt="star" />
-      <img src="star2.png" className="absolute right-10 top-1/3 w-6 animate-pulse" alt="star" />
-      <img src="star3.png" className="absolute left-1/3 bottom-20 w-8 animate-pulse" alt="star" />
-      <img src="star2.png" className="absolute right-[20%] bottom-1/4 w-4 animate-pulse" alt="star" />
-      <img src="star.png" className="absolute left-[15%] top-[15%] w-3 animate-pulse" alt="star" />
+      <img
+        src="star.png"
+        className="absolute left-10 top-1/4 w-5 animate-pulse"
+        alt="star"
+      />
+      <img
+        src="star2.png"
+        className="absolute right-10 top-1/3 w-6 animate-pulse"
+        alt="star"
+      />
+      <img
+        src="star3.png"
+        className="absolute left-1/3 bottom-20 w-8 animate-pulse"
+        alt="star"
+      />
+      <img
+        src="star2.png"
+        className="absolute right-[20%] bottom-1/4 w-4 animate-pulse"
+        alt="star"
+      />
+      <img
+        src="star.png"
+        className="absolute left-[15%] top-[15%] w-3 animate-pulse"
+        alt="star"
+      />
 
       {/* Brightness pulse animation */}
       <style jsx>{`
         @keyframes pulse-bright {
-          0%, 100% {
+          0%,
+          100% {
             filter: brightness(1);
           }
           50% {
@@ -82,3 +102,7 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+
+
