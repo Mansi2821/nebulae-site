@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 relative z-10">
         
         {/* Logo + Description */}
-        <div className="lg:col-span-1 col-span-1">
+        <div className="lg:col-span-1 col-span-1 lg:ml-8">
   <Link href="/" className="flex items-center gap-2 mb-4 hover:opacity-80 transition">
     <img src="/logo.png" alt="logo" className="w-6 h-6" />
     <h2 className="text-xl font-bold">Nebulae</h2>
@@ -32,8 +32,8 @@ const Footer = () => {
 
         {/* Star Image */}
         <div className="hidden lg:block">
-          <img src="/star4.png" alt="star" className="w-24 h-24 object-contain" />
-        </div>
+           <img src="/star3.png" alt="star" className="w-10 h-14 object-contain" />
+         </div>
 
         {/* Quick Links */}
         <div>
